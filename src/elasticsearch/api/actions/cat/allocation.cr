@@ -52,7 +52,7 @@ module Elasticsearch
             :v,
             :s ]
 
-          
+
           node_id = arguments.delete(:node_id) || ""
 
           method = "GET"

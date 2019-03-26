@@ -69,15 +69,15 @@ module Elasticsearch
           else
             filters = ""
           end
-          
+
           token_filters = arguments.delete(:token_filters) || ""
           index = arguments.delete(:index) || ""
 
           method = "GET"
           path   = Utils.__pathify Utils.__listify(index.as(String)), "_analyze"
-          
+
           params = Utils.__validate_and_extract_params arguments, valid_params
-          
+
           body   = arguments.delete(:body) || ""
 
           perform_request(method, path, params, body).body

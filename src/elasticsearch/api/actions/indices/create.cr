@@ -80,9 +80,9 @@ module Elasticsearch
           ]
 
           method = "PUT"
-          
+
           path   = Utils.__pathify Utils.__escape(arguments[:index])
-          
+
           if arguments.has_key? :body
             body = arguments.delete(:body)
           else

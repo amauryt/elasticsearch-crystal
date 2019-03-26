@@ -94,9 +94,9 @@ module Elasticsearch
           id = arguments[:id]
         else
           id = ""
-        end 
+        end
 
-        method = arguments[:id] ? "PUT" : "POST" 
+        method = arguments[:id] ? "PUT" : "POST"
         path   = Utils.__pathify Utils.__escape(arguments[:index].as(String)),
                                  Utils.__escape(arguments[:type].as(String)),
                                  Utils.__escape(id)

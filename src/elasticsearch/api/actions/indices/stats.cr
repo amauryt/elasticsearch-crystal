@@ -106,7 +106,7 @@ module Elasticsearch
 
           method = "GET"
 
-          
+
           path   = Utils.__pathify Utils.__listify(arguments[:index].as(String)), "_stats"
 
           params = Utils.__validate_and_extract_params arguments, valid_params

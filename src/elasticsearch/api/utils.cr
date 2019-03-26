@@ -37,14 +37,14 @@ module Elasticsearch
       def __listify(*tuple)
         list = [] of String | Array(String) #| Hash(Symbol, Bool)
         if tuple.last.is_a?(Hash)
-          options = {:escape => false} 
+          options = {:escape => false}
         else
           options = {:escape => true}
         end
         #tuple.delete(:escape)
         tuple.each { |e| list << e if e.is_a?(String) || e.is_a?(Array(String))}
 
-        
+
 
         Array.new(1,list).first.flatten.
           map { |e| e.responds_to?(:split) ? e.split(',') : e }.
@@ -182,7 +182,7 @@ module Elasticsearch
 
       private def __extract_params(arguments, params=[] of Symbol, exclude=[] of Symbol) #: Hash(Symbol, String | Bool)
         #result = {} of Symbol | Char => Char | String | Bool | Array(String)
-        
+
         params += Elasticsearch::API::Common::Constants::COMMON_QUERY_PARAMS + Elasticsearch::API::Common::Constants::COMMON_PARAMS
         params -= exclude
         #puts "extract_params: args are #{arguments}, checking against #{params}"

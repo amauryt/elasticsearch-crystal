@@ -44,7 +44,7 @@ module Elasticsearch
           else
             body = nil
           end
-          
+
           perform_request(method, path, params, body).body
         end
       end

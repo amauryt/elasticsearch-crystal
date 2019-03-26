@@ -26,12 +26,12 @@ module Elasticsearch
                                                                       "fielddata" => true
                                                                       }
                                                                     }
-                                                                  } 
+                                                                  }
                                                                 },
                                                                "settings" => {
                                                                  "number_of_shards" => "1"
                                                                 }
-                                                              }}) 
+                                                              }})
           #subject.index({:index => "index", :type => "type", :body => {"foo" => "bar"}, :refresh => true})
           #subject.search({:index => "index", :body => {"query" => {"match_all" => {} of String => String}, "sort" => "foo"} })
           subject.cat.fielddata({:h => "field, size", :v => true}).should match /^field/

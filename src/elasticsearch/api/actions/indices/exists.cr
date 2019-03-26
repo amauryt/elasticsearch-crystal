@@ -46,7 +46,7 @@ module Elasticsearch
           body   = nil
 
           perform_request(method, path, params, body).status == 200 ? true : false
-          
+
         end
 
       end

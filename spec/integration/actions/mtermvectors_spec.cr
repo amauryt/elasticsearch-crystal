@@ -14,8 +14,8 @@ module Elasticsearch
 
         it "should get multiple term vectors" do
           subject.indices.create({:index => "test_index", :body => {"mappings" => {"type_1" => {} of String => String}}})
-          subject.create({:index => "test_index", 
-                         :type => "type_1", 
+          subject.create({:index => "test_index",
+                         :type => "type_1",
                          :id => "1",
                          :body => {
                             "title" => "Test 1",

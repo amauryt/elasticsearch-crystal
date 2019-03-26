@@ -23,7 +23,7 @@ module Elasticsearch
         #
         def snapshots(arguments={} of Symbol => String)
           if !arguments.has_key?(:repository)
-            raise ArgumentError.new("Required argument 'repository' missing") 
+            raise ArgumentError.new("Required argument 'repository' missing")
           end
 
           valid_params = [

@@ -14,8 +14,8 @@ module Elasticsearch
 
         it "should delete a document by query" do
           subject.indices.create({:index => "test_index", :body => {"mappings" => {"type_1" => {} of String => String}}})
-          subject.create({:index => "test_index", 
-                         :type => "type_1", 
+          subject.create({:index => "test_index",
+                         :type => "type_1",
                          :id => "1",
                          :body => {
                             "title" => "Test 1",

@@ -32,7 +32,7 @@ module Elasticsearch
       # @since 0.90.1
       #
       def get_source(arguments={} of Symbol => String)
-        if !arguments.has_key?(:id) || !arguments.has_key?(:index) || !arguments.has_key?(:id) 
+        if !arguments.has_key?(:id) || !arguments.has_key?(:index) || !arguments.has_key?(:id)
           raise ArgumentError.new("Required argument 'id' or 'index' or 'id' missing")
         end
         arguments[:type] ||= "_all"
@@ -58,7 +58,7 @@ module Elasticsearch
         body   = nil
 
         perform_request(method, path, params, body).body
-    
+
       end
     end
   end

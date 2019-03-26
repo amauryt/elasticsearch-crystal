@@ -28,7 +28,7 @@ module Elasticsearch
           if !arguments.has_key?(:index)
             raise ArgumentError.new("Required argument 'index' missing")
           end
-          
+
           valid_params = [
             :ignore_indices,
             :ignore_unavailable,

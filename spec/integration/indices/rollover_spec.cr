@@ -14,11 +14,11 @@ module Elasticsearch
         end
 
         it "rollover an alias" do
-          subject.indices.put_template({:name => "test", :body => {"order" => 0, 
-                                                                   "version" => 1, 
+          subject.indices.put_template({:name => "test", :body => {"order" => 0,
+                                                                   "version" => 1,
                                                                    "template" => "test",
                                                                    "index_patterns" => "test-*",
-                                                                   "settings" => {"number_of_shards" => "1", 
+                                                                   "settings" => {"number_of_shards" => "1",
                                                                                   "number_of_replicas" => "0"},
                                                                    "aliases" => {"testali" => {} of String => String}}})
           subject.indices.create({:index => "test-000001"})

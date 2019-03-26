@@ -62,7 +62,7 @@ module Elasticsearch
 
           params = Utils.__validate_and_extract_params arguments, valid_params
           params[:h] = Utils.__listify(params[:h].as(String)) if params.has_key? :h
-          
+
           body   = nil
           perform_request(method, path, params, body).body
         end

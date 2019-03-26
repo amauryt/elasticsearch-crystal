@@ -26,7 +26,7 @@ module Elasticsearch
             :master_timeout ]
 
           repository = arguments.delete(:repository)
-          snapshot   = arguments.delete(:snapshot) 
+          snapshot   = arguments.delete(:snapshot)
           ignore = arguments.delete(:ignore) || ""
 
           method = "DELETE"
@@ -34,9 +34,9 @@ module Elasticsearch
 
           params = Utils.__validate_and_extract_params arguments, valid_params
           body   = nil
-          
+
           perform_request(method, path, params, body).body
-  
+
         end
       end
     end

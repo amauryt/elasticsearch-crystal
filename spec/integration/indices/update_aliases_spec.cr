@@ -21,7 +21,7 @@ module Elasticsearch
                                                       {"add" => {"index" => "testind", "alias" => "testali2"}},
                                                     ]}})
           subject.indices.delete_alias({:index => "testind", :name => "testali2"})
-          (subject.cat.aliases.as(String).empty?).should be_true 
+          (subject.cat.aliases.as(String).empty?).should be_true
         end
       end
     end
