@@ -6,8 +6,4 @@ authors:
 description: |
   Elasticsearch API wrapper for Crystal Lang
 
-development_dependencies:
-  spec2:
-    github: waterlink/spec2.cr
-
 license: MIT
