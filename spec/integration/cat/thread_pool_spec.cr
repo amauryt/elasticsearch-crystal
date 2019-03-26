@@ -13,7 +13,7 @@ module Elasticsearch
         end
 
         it "should return thread pools" do
-          subject.cat.thread_pool.as(String).should match /bulk/
+          subject.cat.thread_pool.as(String).should match /generic/
         end
 
         it "check thread pool are not empty with columns" do
